@@ -1,8 +1,27 @@
 ### Hi, I'm Francisco 👋
 
-MBA candidate exploring applied AI and full-stack engineering. Selected projects below.
+MBA candidate at UC Berkeley Haas exploring applied AI and full-stack engineering. I build projects
+end to end and test them honestly: each one below ships with its evaluation, the evidence, and a
+written account of what didn't work.
+
+**Working with:** Python · PyTorch · local LLMs (Gemma, Ollama) · RAG and retrieval · evals ·
+reinforcement learning · TypeScript / Next.js · Postgres · Jupyter
 
 ### 🤖 AI / Machine Learning
+
+**[personal-wiki-gemma-rag](https://github.com/Cisco071/personal-wiki-gemma-rag)** — A personal
+knowledge assistant that runs **fully offline** on a MacBook Air. My own CLI and harness connect a local
+Gemma 4 E4B model (4-bit, 3.1 GB on the GPU via Ollama) to my class notes, with three modes:
+*ask* gives cited, grounded answers or reports insufficient evidence, *search* shows the original
+passages, and *chat* is an assistant with conversation memory that looks up notes only when needed.
+It uses hybrid retrieval (BM25 + EmbeddingGemma) and an Obsidian wiki that the model generates and links from the source notes.
+All four ask-mode tests pass offline (1–6 s per answer), and the README documents seven failures I found and fixed.
+
+**[mini-llm-class4](https://github.com/Cisco071/mini-llm-class4)** — A 122K-parameter nanoGPT
+language model trained from scratch and evaluated before and after training on a fixed 48-case suite. On
+the scorable cases, accuracy rose from 37.5% (untrained) to 83.3% on the starter corpus, and to 100% after
+I extended the corpus with my own teaching sentences. The training data is checked for eval leakage, and the
+repo includes an interactive training dashboard and a terminal chat interface.
 
 **[class3-pacman-dqn](https://github.com/Cisco071/class3-pacman-dqn)** — Deep Q-Network trained on
 `ALE/MsPacman-v5` (Atari) from raw pixels. Trained for 200 episodes (~30K learning updates), raising
