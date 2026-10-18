@@ -4,10 +4,20 @@ MBA candidate at UC Berkeley Haas exploring applied AI and full-stack engineerin
 end to end and test them honestly: each one below ships with its evaluation, the evidence, and a
 written account of what didn't work.
 
-**Working with:** Python · PyTorch · local LLMs (Gemma, Ollama) · RAG and retrieval · evals ·
-reinforcement learning · TypeScript / Next.js · Postgres · Jupyter
+**Working with:** Python · PyTorch · Claude API & multi-agent pipelines · local LLMs (Gemma, Ollama) · RAG and
+retrieval · evals · reinforcement learning · TypeScript / Next.js · Postgres · Jupyter
 
 ### 🤖 AI / Machine Learning
+
+**[spotify-multi-agent-pipeline](https://github.com/Cisco071/spotify-multi-agent-pipeline)** — A
+multi-agent pipeline that turns **150,000 real Spotify Play Store reviews** (from a 660,622-row, 97 MB file) into a
+traceable product recommendation. Code orchestrates parallel Claude Haiku agents (≤50 reviews per request) for
+labeling, an independent Claude Sonnet verifier, code-owned grouping, ranking and anomaly detection, and a memo agent
+whose every number is re-checked by code. 149,996 of 150,000 reviews were classified for about $12.70 in API spend,
+with saved progress, crash recovery and a recorded interrupt-and-resume. Evaluated against 50 hand-labeled reviews,
+a blind verifier, planted errors and prompt-injection tests. Results are served from Neon Postgres to a
+[live Next.js dashboard](https://spotify-review-insights-dun.vercel.app) with period filters, event-annotated trends and
+recurring-problem views. The README documents the failures and where the labels disagree.
 
 **[personal-wiki-gemma-rag](https://github.com/Cisco071/personal-wiki-gemma-rag)** — A personal
 knowledge assistant that runs **fully offline** on a MacBook Air. My own CLI and harness connect a local
