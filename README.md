@@ -47,8 +47,3 @@ app built on Next.js and Neon Postgres, with Neon Managed Better Auth and the Ne
 frontend calls the database's REST API directly; Postgres Row Level Security (not application code)
 enforces that every user can only ever see or modify their own rows. Includes a password-reset flow,
 an automated test suite, and a README documenting the schema, security model, and deployment.
-
-### ☁️ Cloud Computing
-
-**[Cloud-computing-course-](https://github.com/Cisco071/Cloud-computing-course-)** — Exercises from a
-cloud computing fundamentals course.
